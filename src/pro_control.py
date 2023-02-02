@@ -4,7 +4,7 @@ class ProControl:
                     specifically for the motor position on the
                     motors in the ME_405 kit
     """
-    def __init__(self, gain, setpoint, position):
+    def __init__(self, gain = 1, setpoint = 0):
         """!@brief	The constructor for the motor driver class
         @details	The constructor takes in initial settings for
                     gain and setpoint. For a step response the setpoint
@@ -12,11 +12,9 @@ class ProControl:
                     set_setpoint method
         @param	gain The initial gain for the proportional control loop
         @param	setpoint The initial setpoint for the control loop
-        @param	position The current position of the item being controlled
         """
         self.gain = gain
         self.setpoint = setpoint
-        #self.position = position
         
     def run(self,position)
         """!@brief	Runs the control loop
@@ -33,5 +31,12 @@ class ProControl:
         @param	new_setpoint The desired setpoint for the system
         """
         self.setpoint = new_setpoint
+    def set_Kp(self, new_gain)
+        """!@brief	Changes the gain for the system
+        @details	Adjusts the proportional gain for the control
+                    loop.
+        @param	new_gain The desired gain for the system
+        """
+        self.gain = new_gain
         
     
