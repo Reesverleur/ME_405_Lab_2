@@ -10,7 +10,10 @@ class ProControl:
                     gain and setpoint. For a step response the setpoint
                     should start at 0 and will later be changed by the
                     set_setpoint method
-        @param	gain The initial gain for the 
+        @param	gain The initial gain for the proportional control loop
+        @param	setpoint The initial setpoint for the control loop
+        """
         self.gain = gain
         self.setpoint = setpoint
+        
         
