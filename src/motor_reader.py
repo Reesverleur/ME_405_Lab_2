@@ -1,6 +1,7 @@
 # PC Python file for lab 2
 
 import serial
+from matplotlib import pyplot
 
 
 def main():
@@ -35,6 +36,14 @@ def main():
             if (d1stat and d2stat):
                 x_list.append(data1)
                 y_list.append(data2)
+                
+            sline = s_port.readline()
+            
+            
+        
+            
+        #for i in range(len(x_list)):
+        #    print(x_list[i], ",", y_list[i])
 
 
 
