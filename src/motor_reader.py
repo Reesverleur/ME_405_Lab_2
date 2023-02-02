@@ -10,14 +10,16 @@ def main():
     x_list = []
     y_list = []
     
-    with serial.Serial('COMx', 115200) as s_port:
+    with serial.Serial('COM4', 115200) as s_port:
         #
         # send kp value
-        s_port.write(b'0.2')
-        
+        time.sleep(1)
+        s_port.write(b'16384\r\n')
+        time.sleep(1)
+        s_port.write(b'0.2\r\n')
         
         sline = s_port.readline()
-        while(sline != ""):
+        while(sline != "done"):
         
             try:
                 data1, data2 = s_port.readline().split(b',')

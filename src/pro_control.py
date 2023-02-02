@@ -16,22 +16,22 @@ class ProControl:
         self.gain = gain
         self.setpoint = setpoint
         
-    def run(self,position)
+    def run(self,position):
         """!@brief	Runs the control loop
         @details	Executes one step of the control loop and
                     returns the effort
         @param	position The current position of the system
         """
-        effort = self.gain*(self.setpoint-position)
+        effort = self.gain*(position-self.setpoint)
         return effort
-    def set_setpoint(self, new_setpoint)
+    def set_setpoint(self, new_setpoint):
         """@brief	Changes the setpoint for the system
         @details	Adjusts the setpoint for the control loop
                     for a step response this should be changed once
         @param	new_setpoint The desired setpoint for the system
         """
         self.setpoint = new_setpoint
-    def set_Kp(self, new_gain)
+    def set_Kp(self, new_gain):
         """!@brief	Changes the gain for the system
         @details	Adjusts the proportional gain for the control
                     loop.
