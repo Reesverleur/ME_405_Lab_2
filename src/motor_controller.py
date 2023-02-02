@@ -19,7 +19,7 @@ def main():
     y = 0
     time = []
     position = []
-    while y <512:
+    while y <128:
         read,pos = enc.update(read,pos)
         position.append(pos)
         time.append(utime.ticks_ms())
