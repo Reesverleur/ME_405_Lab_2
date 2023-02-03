@@ -15,9 +15,13 @@ def main():
     read = enc.read()
     pos = 0
     
-    con.set_setpoint(int(u2.readline()))
+    
+    #con.set_setpoint(int(input('Enter setpoint: ')))
     while True:
+        con.set_setpoint(int(u2.readline()))
         con.set_Kp(float(u2.readline()))
+        #con.set_Kp(float(input('Enter gain: ')))
+        read = enc.read()
         pos = 0
         start = utime.ticks_ms()
         time = []
@@ -25,7 +29,7 @@ def main():
         for y in range(128):
             read,pos = enc.update(read,pos)
             position.append(pos)
-            time.append(utime.ticks_diff(start,utime.ticks_ms()))
+            time.append(utime.ticks_diff(utime.ticks_ms(),start))
             effort = con.run(pos)
             #print("Effort = ",effort)
             if effort<-100:
@@ -39,7 +43,7 @@ def main():
         for x,y in zip(time,position):
             u2.write(f"{x},{y}\r\n")
             
-        u2.write('done'
+        u2.write(b'done\r\n')
             
         
 if __name__=='__main__':
