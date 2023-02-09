@@ -9,13 +9,13 @@ import time
 
 
 def main():
-    """!@brief This is the main function which passes data to the micropython
-        device. 
-        @details This function uses the pyserial module to communicate over the
-        serial port to the micropython. The function sends a setpoint and gain
-        to the Nucleo and waits for the return data which represents the motor
-        response. The data is then plotted and displayed.
-    """
+   """!@brief This is the main function which passes data to the micropython
+      device. 
+       @details This function uses the pyserial module to communicate over the
+       serial port to the micropython. The function sends a setpoint and gain
+       to the Nucleo and waits for the return data which represents the motor
+       response. The data is then plotted and displayed.
+   """
     
    x_list = []
    y_list = []

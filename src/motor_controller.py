@@ -35,7 +35,7 @@ def main():
         start = utime.ticks_ms()
         time = []
         position = []
-        for y in range(1024):
+        for y in range(255):
             read,pos = enc.update(read,pos)
             position.append(pos)
             time.append(utime.ticks_diff(utime.ticks_ms(),start))
