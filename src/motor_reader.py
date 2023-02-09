@@ -26,7 +26,7 @@ def main():
        time.sleep(1)
        s_port.write(b'1024\r\n')
        time.sleep(1)
-       s_port.write(b'0.2\r\n')
+       s_port.write(b'0.03\r\n')
        
        while True:
            sline = s_port.readline()
