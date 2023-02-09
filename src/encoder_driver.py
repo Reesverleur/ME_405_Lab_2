@@ -1,3 +1,12 @@
+"""@file encoder_driver.py
+        This file contains a class which allows for interaction with
+        a quadrature encoder. The class contains an initializer and 3
+        methods: read, zero, and update
+        
+        The class allows for reading of the timer attached to the
+        encoder, as well as reading the absolute displacement of the
+        motor accounting for over/underflow using the update method.
+"""
 import utime
 import pyb
 class EncoderDriver:

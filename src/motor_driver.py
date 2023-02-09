@@ -1,3 +1,10 @@
+"""@file motor_driver.py
+        This file contains a class which allows for control of a motor
+        using the ME405 motor shield for the nucleo. The class contains
+        an initializer, and one method: set_duty_cycle. The class uses
+        the value in duty cycle (which must be between -100 and 100) to
+        set the duty cycles of two linked PWM signals
+"""
 import utime
 import pyb
 class MotorDriver:

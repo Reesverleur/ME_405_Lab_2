@@ -1,3 +1,8 @@
+"""!@file pro_control.py
+        This file contains the class which allows for proportional
+        control of the motor. The class contains an initializer and
+        3 methods: run, set_setpoint, and set_Kp
+"""
 class ProControl:
     """!@brief	This class performs proportional control
         @details	This class performs proportional control
