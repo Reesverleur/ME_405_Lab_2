@@ -1,3 +1,12 @@
+"""!@file motor_controller.py
+        This file uses the proportional control scheme in
+        pro_control.py and the motor and encoder drivers from
+        lab 1 to control a motor.
+        
+        The file works with motor_reader.py which should be run
+        on a PC. That file sends the required setpoint and gain
+        and then reads the data from the response.
+"""
 from motor_driver import MotorDriver
 from encoder_driver import EncoderDriver
 from pro_control import ProControl
@@ -26,7 +35,7 @@ def main():
         start = utime.ticks_ms()
         time = []
         position = []
-        for y in range(128):
+        for y in range(1024):
             read,pos = enc.update(read,pos)
             position.append(pos)
             time.append(utime.ticks_diff(utime.ticks_ms(),start))
@@ -39,7 +48,7 @@ def main():
                 
             motor.set_duty_cycle(effort)
             utime.sleep_ms(10)
-            
+        motor.set_duty_cycle(0) 
         for x,y in zip(time,position):
             u2.write(f"{x},{y}\r\n")
             
