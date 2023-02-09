@@ -30,7 +30,7 @@ class ProControl:
         effort = self.gain*(position-self.setpoint)
         return effort
     def set_setpoint(self, new_setpoint):
-        """@brief	Changes the setpoint for the system
+        """!@brief	Changes the setpoint for the system
         @details	Adjusts the setpoint for the control loop
                     for a step response this should be changed once
         @param	new_setpoint The desired setpoint for the system

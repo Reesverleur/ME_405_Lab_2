@@ -1,4 +1,4 @@
-"""@file motor_driver.py
+"""!@file motor_driver.py
         This file contains a class which allows for control of a motor
         using the ME405 motor shield for the nucleo. The class contains
         an initializer, and one method: set_duty_cycle. The class uses

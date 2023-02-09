@@ -1,4 +1,4 @@
-"""@file encoder_driver.py
+"""!@file encoder_driver.py
         This file contains a class which allows for interaction with
         a quadrature encoder. The class contains an initializer and 3
         methods: read, zero, and update
