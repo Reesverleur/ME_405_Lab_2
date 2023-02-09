@@ -10,7 +10,7 @@ Our three test cases show under damped, over damped, and just right.\cf2 \cb3 \e
 motor_controller.py is considered our main python file, using all of the classes together to perform the lab. motor_reader.py is the program we used on the terminal to set the set point and gain, and also obtain plots of our motor performance.\
 \
 
-[Underdamped Case](ExcessiveOscillation.png)
+![Underdamped Case](ExcessiveOscillation.png)
 \
 ![Overdamped Case](Overdamped.png)
 \
