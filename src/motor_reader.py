@@ -24,9 +24,10 @@ def main():
        #
        # send kp value
        time.sleep(1)
-       s_port.write(b'1024\r\n')
+       s_port.write(b'16384\r\n')
        time.sleep(1)
-       s_port.write(b'0.03\r\n')
+       s_port.write(b'0.2\r\n')
+       time.sleep(1)
        
        while True:
            sline = s_port.readline()
